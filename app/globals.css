@@ -1,0 +1,196 @@
+@import "tailwindcss";
+
+@theme {
+  /* Mapping your custom variables to Tailwind utilities */
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card-bg: var(--card-bg);
+  --color-card-border: var(--card-border);
+  --color-accent: var(--accent);
+  --color-accent-muted: var(--accent-muted);
+  --color-text-muted: var(--text-muted);
+  --color-border: var(--border-color);
+  
+  /* If you use custom spacing or shadows, add them here too */
+  --shadow-card: 0 20px 25px -5px rgba(0, 0, 0, 0.3);
+}
+
+/* Keep your existing :root definitions so the variables have values */
+:root {
+  --background: #0f0f0f;
+  --foreground: #ffffff;
+  --card-bg: #1a1a1a;
+  --card-border: #222222;
+  --accent: #ffffff;
+  --accent-muted: #999999;
+  --text-muted: #666666;
+  --border-color: #222222;
+  --glass-bg: rgba(255, 255, 255, 0.05);
+  --glass-border: rgba(255, 255, 255, 0.1);
+}
+
+@layer base {
+  body {
+    /* Now Tailwind recognizes 'bg-background' because of the @theme block */
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-sans font-bold;
+    letter-spacing: -0.02em;
+  }
+
+  h1 {
+    @apply text-4xl md:text-5xl lg:text-6xl;
+  }
+
+  h2 {
+    @apply text-3xl md:text-4xl lg:text-5xl;
+  }
+
+  h3 {
+    @apply text-2xl md:text-3xl;
+  }
+
+  p {
+    @apply text-base md:text-lg leading-relaxed;
+    color: #e0e0e0;
+  }
+}
+
+/* ============== Glass Morphism Effect ============== */
+.glass {
+  background: var(--glass-bg);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--glass-border);
+}
+
+.glass-sm {
+  background: var(--glass-bg);
+  backdrop-filter: blur(5px);
+  border: 1px solid var(--glass-border);
+}
+
+/* ============== Gradient Effects ============== */
+.gradient-text {
+  background: linear-gradient(135deg, #ffffff 0%, #999999 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.gradient-border {
+  background: linear-gradient(135deg, #ffffff 0%, #1a1a1a 100%);
+  padding: 1px;
+}
+
+/* ============== Utility Classes ============== */
+.container-custom {
+  @apply max-w-7xl mx-auto px-4 md:px-6 lg:px-8;
+}
+
+.transition-smooth {
+  @apply transition-all duration-300 ease-out;
+}
+
+.transition-slow {
+  @apply transition-all duration-500 ease-out;
+}
+
+/* ============== Scrollbar Styling ============== */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0f0f0f;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #333333;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #444444;
+}
+
+/* ============== Selection ============== */
+::selection {
+  background-color: #ffffff;
+  color: #0f0f0f;
+}
+
+
+
+/* ============== Input Focus States ============== */
+input:focus,
+textarea:focus {
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.1);
+}
+
+/* ============== Smooth Scroll Behavior ============== */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+}
+
+/* ============== Animation Performance ============== */
+.will-change-transform {
+  will-change: transform;
+}
+
+.will-change-opacity {
+  will-change: opacity;
+}
+
+/* ============== Backdrop Filter Support ============== */
+@supports (backdrop-filter: blur(1px)) {
+  .glass {
+    backdrop-filter: blur(10px);
+  }
+
+  .glass-sm {
+    backdrop-filter: blur(5px);
+  }
+}
+
+/* ============== Image Optimization ============== */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+
+
+
+/* ============== Card Shadows ============== */
+.shadow-card {
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3);
+}
+
+/* ============== Responsive Text ============== */
+@media (max-width: 640px) {
+  h1 {
+    @apply text-3xl md:text-4xl;
+  }
+
+  h2 {
+    @apply text-2xl md:text-3xl;
+  }
+
+  h3 {
+    @apply text-xl md:text-2xl;
+  }
+}
