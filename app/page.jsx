@@ -9,6 +9,7 @@ import TestimonialsSection from '@/components/sections/TestimonialsSection'
 import FAQSection from '@/components/sections/FAQSection'
 import CTASection from '@/components/sections/CTASection'
 import LightRays from '../components/saad/LightRays'
+import ProjectSection from '../components/sections/ProjectSection'
 
 
 export default function Home() {
@@ -16,6 +17,7 @@ export default function Home() {
     <main className="min-h-screen bg-background">
       <Navbar />
       <HeroSection />
+      <ProjectSection />
       <AboutPreviewSection />
       <WhyMeSection />
       <ServicesSection />

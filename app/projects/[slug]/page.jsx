@@ -1,25 +1,3 @@
-// // app/portfolio/go-logistics/page.jsx
-// "use client";
-
-// import Hero from "@/components/project/Hero";
-// import Overview from "@/components/project/Overview";
-// import DesignProcess from "@/components/project/DesignProcess";
-// import ShowcaseUI from "@/components/project/ShowcaseUI";
-// import Navbar from "../../../components/Navbar";
-// import Footer from "../../../components/Footer";
-
-// export default function page() {
-//   return (
-//     <main className="w-full bg-black min-h-screen antialiased selection:bg-white/20">
-//     <Navbar />
-//       <Hero />
-//       <Overview />
-//       <DesignProcess />
-//       <ShowcaseUI />
-//       <Footer />
-//     </main>
-//   );
-// }
 
 
 // app/portfolio/[slug]/page.jsx
