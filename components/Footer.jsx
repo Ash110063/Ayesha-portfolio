@@ -4,8 +4,8 @@ import Link from 'next/link'
 import { motion } from 'framer-motion'
 
 const socialLinks = [
-  { name: 'GitHub', href: 'https://github.com/masoomk9666', icon: 'github' },
-  { name: 'LinkedIn', href: 'https://www.linkedin.com/in/saad-ali-a41b04162/', icon: 'linkedin' },
+  // { name: 'GitHub', href: 'https://github.com/masoomk9666', icon: 'github' },
+  { name: 'LinkedIn', href: 'https://www.linkedin.com/in/aisha-riaz-452215244/', icon: 'linkedin' },
 
 ]
 
