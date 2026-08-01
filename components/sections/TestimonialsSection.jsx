@@ -71,7 +71,7 @@ const Testimonials = () => {
             <Link href="/contact" className="w-full sm:w-auto text-center px-8 py-3.5 rounded-full font-bold text-black bg-gradient-to-b from-white to-[#a3a3a3] text-[13px] sm:text-sm shadow-lg active:scale-95 transition-transform">
               Contact Now
             </Link>
-            <Link
+            {/* <Link
               href="/projects"
               className="w-full sm:w-auto text-center px-8 py-3.5 text-[13px] sm:text-sm font-medium transition-all text-white border border-white/10 rounded-full hover:bg-white/5"
               style={{
@@ -79,7 +79,7 @@ const Testimonials = () => {
               }}
             >
               See All Projects
-            </Link>
+            </Link> */}
           </div>
         </div>
 

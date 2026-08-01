@@ -95,7 +95,7 @@ export default function AboutPreviewSection() {
                   <Linkedin size={18} className="md:w-5 md:h-5" />
                 </Link>
 
-                <Link
+                {/* <Link
                   href={about.socials.github}
                   className="text-gray-400 hover:text-white transition-colors"
                 >
@@ -107,7 +107,7 @@ export default function AboutPreviewSection() {
                   className="text-gray-400 hover:text-white transition-colors"
                 >
                   <Twitter size={18} className="md:w-5 md:h-5" />
-                </Link>
+                </Link> */}
               </div>
             </div>
           </motion.div>

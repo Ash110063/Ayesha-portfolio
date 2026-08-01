@@ -15,45 +15,45 @@ const geistMono = Geist_Mono({
   variable: '--font-mono',
 })
 
-export const metadata: Metadata = {
-  metadataBase: new URL('https://saad-portfolio.vercel.app'), // Aapka apna deployment name
-  title: 'Frontend & Wordpress Specilist Portfolio | Saad Ali',
-  description: 'High-quality frontend & Wordpress portfolio showcasing web apps, websites, and design projects. Built with Next.js, React, and modern web technologies.',
-  keywords: ['frontend developer', 'portfolio', 'web development', 'react', 'next.js', "Wordpress", "WooCommerce", "Elementor", "Elementor Pro", "Wordpress Bugs", "Wordpress Issues"],
-  authors: [{ name: 'Manahil Mustafa' }],
-  creator: 'Saad Ali',
-  generator: 'Next.js',
+// export const metadata: Metadata = {
+//   metadataBase: new URL('https://saad-portfolio.vercel.app'), // Aapka apna deployment name
+//   title: 'Frontend & Wordpress Specilist Portfolio | Saad Ali',
+//   description: 'High-quality frontend & Wordpress portfolio showcasing web apps, websites, and design projects. Built with Next.js, React, and modern web technologies.',
+//   keywords: ['frontend developer', 'portfolio', 'web development', 'react', 'next.js', "Wordpress", "WooCommerce", "Elementor", "Elementor Pro", "Wordpress Bugs", "Wordpress Issues"],
+//   authors: [{ name: 'Manahil Mustafa' }],
+//   creator: 'Saad Ali',
+//   generator: 'Next.js',
   
-  // 👇 Browser Tab Logo (Favicon)
-  icons: {
-    icon: '/fav-icon.png',         // Standard icon
-    shortcut: '/fav-icon.png',     // Shortcut icon
-    apple: '/fav-icon.png',        // Apple devices ke liye
-  },
+//   // 👇 Browser Tab Logo (Favicon)
+//   icons: {
+//     icon: '/fav-icon.png',         // Standard icon
+//     shortcut: '/fav-icon.png',     // Shortcut icon
+//     apple: '/fav-icon.png',        // Apple devices ke liye
+//   },
 
-  openGraph: {
-    type: 'website',
-    url: 'https://yourportfolio.com',
-    title: 'Frontend & Wordpress Specialist Portfolio',
-    description: 'Explore my latest web projects and services',
-    siteName: 'Portfolio',
-    images: [
-      {
-        url: '/wordpress.png', // Jab link share karein to ye image dikhegi
-        width: 1200,
-        height: 630,
-        alt: 'Saad Ali Portfolio Preview',
-      },
-    ],
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Saad Ali - Frontend & Wordpress Specialist Portfolio',
-    description: 'High-quality web development portfolio',
-    creator: '@saadAli',
-    images: ['/wordpress.png'],
-  },
-}
+//   openGraph: {
+//     type: 'website',
+//     url: 'https://yourportfolio.com',
+//     title: 'Frontend & Wordpress Specialist Portfolio',
+//     description: 'Explore my latest web projects and services',
+//     siteName: 'Portfolio',
+//     images: [
+//       {
+//         url: '/wordpress.png', // Jab link share karein to ye image dikhegi
+//         width: 1200,
+//         height: 630,
+//         alt: 'Saad Ali Portfolio Preview',
+//       },
+//     ],
+//   },
+//   twitter: {
+//     card: 'summary_large_image',
+//     title: 'Saad Ali - Frontend & Wordpress Specialist Portfolio',
+//     description: 'High-quality web development portfolio',
+//     creator: '@saadAli',
+//     images: ['/wordpress.png'],
+//   },
+// }
 
 export const viewport = {
   width: 'device-width',

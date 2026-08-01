@@ -73,7 +73,7 @@ export const Data = [
       ],
 
       socials: {
-        linkedin: "https://www.linkedin.com/in/saad-ali-a41b04162/",
+        linkedin: "https://www.linkedin.com/in/aisha-riaz-452215244/",
         github: "https://github.com/masoomk9666",
         twitter: "https://www.instagram.com/itz_saad_khanzz",
       },
