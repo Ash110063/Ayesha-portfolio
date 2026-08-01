@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
+import Link from 'next/link'
 
 export default function ContactPage() {
   return (
@@ -33,9 +34,11 @@ export default function ContactPage() {
                  <h4 className="text-lg md:text-xl font-bold">Prefer to book a call?</h4>
                  <p className="text-zinc-500 text-sm">Pick a time that works for you.</p>
                </div>
+               <Link href="tel:+923328556215" >
                <button className="w-full sm:w-auto px-6 py-3 rounded-full bg-[#111111] border border-white/10 text-sm font-bold hover:bg-white hover:text-black transition-all whitespace-nowrap">
                   Let's Book A Call
                </button>
+               </Link>
             </div>
           </div>
 
