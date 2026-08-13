@@ -139,7 +139,7 @@ export default function AboutPreviewSection() {
                   <button
                     key={tab.label}
                     onClick={() => setActiveTab(index)}
-                    className={`px-4 py-2 rounded-lg border text-sm transition-all duration-300
+                    className={`px-4 py-2 rounded-full border text-sm transition-all duration-300
               ${
                 activeTab === index
                   ? "bg-white text-black border-white"

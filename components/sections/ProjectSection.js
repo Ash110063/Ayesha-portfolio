@@ -151,12 +151,12 @@ const ProjectSection = () => {
   }, []);
 
   const projects = [
-    { id: 1, title: "Logis AI",bgImg: "/projects/logis/logis-bg.png", img: "/projects/logis/desktop.png", link: "/projects/logis-ai" },
+    { id: 1, title: "Logis AI",bgImg: "/projects/logis/logis-bg.png", img: "/projects/logis/desktop.png", link: "/projects/go-logistics" },
     { id: 2, title: "Aynigma",bgImg: "/projects/aynigma/aynigma-bg.png", img: "/projects/aynigma/desktop.png", link: "/projects/aynigma" },
     { id: 3, title: "Nurexa",bgImg: "/projects/nurexa/nurexa-bg.png", img: "/projects/nurexa/desktop.png", link: "/projects/nurexa" },
     { id: 4, title: "FC Football",bgImg: "/projects/smart-fc/smart-fc-bg.png", img: "/projects/smart-fc/desktop.png", link: "/projects/smart-fc" },
     { id: 5, title: "Wittify",bgImg: "/projects/wittify/wittify-bg.png", img: "/projects/wittify/desktop.png", link: "/projects/wittify" },
-    { id: 6, title: "Healix",bgImg: "/projects/healix/healix-bg.png", img: "/projects/healix/desktop.png", link: "/projects/healix" },
+    { id: 6, title: "Healix",bgImg: "/projects/healix/healix-bg.png", img: "/projects/healix/desktop.png", link: "#" },
   ];
 
   return (

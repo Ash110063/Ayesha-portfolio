@@ -225,7 +225,7 @@ export const projectData = {
     },
     showcaseImages: {
       showcaseBg: "/projects/nurexa/showcase-bg.png",
-      screen1: "/projects/nurexa/screen-1.png",
+      mobile1: "/projects/nurexa/screen-1.png",
       screen2: "/projects/nurexa/screen-2.png",
       screen3: "/projects/nurexa/screen-3.png",
       screen4: "/projects/nurexa/screen-4.png",
