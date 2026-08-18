@@ -1,6 +1,4 @@
 "use client";
-
-import Image from "next/image";
 import { SECTION_IDS } from "@/data/nav";
 import { SITE } from "@/data/site";
 import FillText from "@/components/ui/FillText";
