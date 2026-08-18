@@ -35,23 +35,6 @@ export default function Footer() {
         </p>
 
         <div className="mt-10 flex w-full max-w-3xl flex-col items-start gap-4 sm:items-center md:flex-row md:justify-center md:gap-8">
-          {/* <ContactPill
-            href={`mailto:${SITE.email}`}
-            icon="/svg/social-mail.svg"
-            label={SITE.email}
-          />
-          <ContactPill
-            href={SITE.phoneHref}
-            icon="/svg/social-phone.svg"
-            label={SITE.phone}
-          />
-          <ContactPill
-            href={SITE.linkedin}
-            icon="/svg/social-linkedin.svg"
-            label="LinkedIn"
-            external
-          /> */}
-
           <ContactPill href={`mailto:${SITE.email}`} label={SITE.email}>
             <FaEnvelope size={18} />
           </ContactPill>
@@ -64,7 +47,7 @@ export default function Footer() {
             <FaLinkedinIn size={18} />
           </ContactPill>
         </div>
-
+   
         <div className="mt-16 flex w-full flex-col items-center gap-3 border-t border-white/10 pt-6 text-sm text-[var(--fg-dim)] md:flex-row md:justify-between">
           <p>{SITE.copyright}</p>
           <div className="flex gap-6">
