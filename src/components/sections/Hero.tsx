@@ -25,7 +25,7 @@ export default function Hero() {
         <div className="absolute inset-0 bg-gradient-to-b from-black/55 via-black/25 to-black/80" />
       </div>
 
-      <div className="pointer-events-none absolute right-0 scale-120 bottom-[-31px] h-[min(673px,85vw)] w-[min(560px,72vw)] opacity-45 lg:opacity-100 xl:left-[calc(50%+180px)] xl:right-auto">
+      <div className="pointer-events-none absolute right-0 scale-120 bottom-[-31px] h-[min(673px,85vw)] w-[min(560px,72vw)] opacity-60 lg:opacity-100 xl:left-[calc(50%+180px)] xl:right-auto">
         <Image
           src="/images/hero/portrait-vercel.png"
           alt=""

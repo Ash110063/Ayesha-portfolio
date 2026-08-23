@@ -421,9 +421,9 @@ body {
   }
 }
 
-@media (max-width: 767.98px) {
+/* @media (max-width: 767.98px) {
   .glass-mobile-solid {
     backdrop-filter: none !important;
     background: rgb(255 255 255 / 0.05) !important;
   }
-}
+} */

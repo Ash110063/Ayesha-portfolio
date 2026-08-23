@@ -35,8 +35,8 @@ export const EXPERIENCE: ExperienceItem[] = [
 ];
 
 export const TECH_STACK = [
-  { name: "Figma", src: "/images/stack/figma.png" },
-  { name: "Framer", src: "/images/stack/framer.png" },
+  { name: "Figma", src: "/images/stack/figma1.png" },
+  { name: "Framer", src: "/images/stack/framer1.png" },
   { name: "Miro", src: "/images/stack/miro.png" },
   { name: "Zapier", src: "/images/stack/zapier.png" },
   { name: "OpenAI", src: "/images/stack/openai.png" },

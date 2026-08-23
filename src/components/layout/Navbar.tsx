@@ -147,7 +147,7 @@ export default function Navbar() {
           ref={panelRef}
           id="nav-menu"
           role="menu"
-          className="mt-2 hidden max-h-[70vh] overflow-y-auto rounded-3xl border border-white/10 bg-[var(--surface-2)] p-4 shadow-2xl backdrop-blur-[12px] glass-mobile-solid"
+          className="mt-2 hidden max-h-[70vh] overflow-y-auto rounded-3xl border border-white/10 bg-[var(--surface-2)] p-4 shadow-2xl backdrop-blur-[12px] "
           style={{ height: 0, opacity: 0 }}
         >
           <nav className="flex flex-col gap-1">

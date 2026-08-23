@@ -25,7 +25,7 @@ export default function FolderCard({
     <a
       href={href}
       className={cn(
-        "folder-card group relative block aspect-[217/153] w-full min-w-0 overflow-hidden rounded-lg transition-transform duration-[260ms] ease-[cubic-bezier(.22,1,.36,1)] hover:-translate-y-1.5 md:min-h-[150px]",
+        "folder-card group relative block aspect-[217/153] w-60 md:w-full min-w-0 overflow-hidden rounded-lg transition-transform duration-[260ms] ease-[cubic-bezier(.22,1,.36,1)] hover:-translate-y-1.5 md:min-h-[150px]",
         className,
       )}
       onClick={(e) => {
