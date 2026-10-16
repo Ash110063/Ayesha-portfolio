@@ -1,0 +1,65 @@
+:root {
+  /* Surfaces */
+  --bg: #000000;
+  --panel: #010000;
+  --card: #141414;
+  --tag: #1b1b1b;
+  --floor: #111111;
+
+  /* Ink */
+  --ink: #ffffff;
+  --ink-60: rgba(255, 255, 255, 0.6);
+  --ink-50: rgba(255, 255, 255, 0.5);
+  --muted: #999999;
+  --line: rgba(255, 255, 255, 0.1);
+
+  /* Accent */
+  --accent: #98f646;
+
+  /* Type */
+  --font-sans: var(--font-geist-sans), system-ui, sans-serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, monospace;
+
+  /* Layout */
+  --rail: 52px;
+  --nav: 52px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  background: var(--bg);
+  color: var(--ink);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: var(--font-sans);
+  background: var(--bg);
+  min-height: 100vh;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img,
+video {
+  display: block;
+}
+
+::selection {
+  background: var(--accent);
+  color: #000;
+}
+
+:focus-visible {
+  outline: 1px dashed var(--accent);
+  outline-offset: 3px;
+}

@@ -1,0 +1,115 @@
+.root {
+  position: absolute;
+  pointer-events: none;
+}
+
+.lean {
+  position: absolute;
+  inset: 0;
+}
+
+.blob {
+  position: absolute;
+  inset: 0;
+  background-image: var(--g);
+  filter: blur(var(--blur));
+  will-change: translate, scale, rotate, opacity;
+  transform-origin: 50% 60%;
+}
+
+/* Main blob: Figma's glow, made organic */
+.primary {
+  animation:
+    glow-drift var(--t-drift) ease-in-out var(--phase) infinite alternate,
+    glow-breathe var(--t-breathe) ease-in-out var(--phase) infinite alternate,
+    glow-sway var(--t-sway) ease-in-out var(--phase) infinite alternate,
+    glow-pulse var(--t-pulse) ease-in-out var(--phase) infinite alternate;
+}
+
+/* Echo blob: same gradient, smaller, slower, counter-moving — adds depth */
+.secondary {
+  inset: 12% 14%;
+  opacity: 0.45;
+  animation:
+    glow-drift-echo calc(var(--t-drift) * 1.37) ease-in-out var(--phase) infinite alternate,
+    glow-breathe calc(var(--t-breathe) * 1.21) ease-in-out calc(var(--phase) - 2s) infinite alternate-reverse,
+    glow-sway calc(var(--t-sway) * 0.83) ease-in-out var(--phase) infinite alternate-reverse,
+    glow-pulse-echo calc(var(--t-pulse) * 1.6) ease-in-out var(--phase) infinite alternate;
+}
+
+/* Pause everything while the card is off screen */
+.root:not([data-active="true"]) .blob {
+  animation-play-state: paused;
+}
+
+@keyframes glow-drift {
+  0% {
+    translate: 0 0;
+  }
+  35% {
+    translate: calc(var(--dx) * 0.6) calc(var(--dy) * -1);
+  }
+  70% {
+    translate: var(--dx) calc(var(--dy) * -0.35);
+  }
+  100% {
+    translate: calc(var(--dx) * 0.25) calc(var(--dy) * -0.8);
+  }
+}
+
+@keyframes glow-drift-echo {
+  0% {
+    translate: calc(var(--dx) * 0.5) 0;
+  }
+  50% {
+    translate: calc(var(--dx) * -0.9) calc(var(--dy) * -0.6);
+  }
+  100% {
+    translate: calc(var(--dx) * -0.2) calc(var(--dy) * 0.4);
+  }
+}
+
+@keyframes glow-breathe {
+  from {
+    scale: var(--s-min);
+  }
+  to {
+    scale: var(--s-max);
+  }
+}
+
+@keyframes glow-sway {
+  from {
+    rotate: calc(var(--sway) * -1);
+  }
+  to {
+    rotate: var(--sway);
+  }
+}
+
+@keyframes glow-pulse {
+  from {
+    opacity: var(--o-min);
+  }
+  to {
+    opacity: var(--o-max);
+  }
+}
+
+@keyframes glow-pulse-echo {
+  from {
+    opacity: 0.25;
+  }
+  to {
+    opacity: 0.55;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .blob {
+    animation: none;
+  }
+  .secondary {
+    display: none;
+  }
+}

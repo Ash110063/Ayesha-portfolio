@@ -1,0 +1,36 @@
+.roll {
+  display: inline-flex;
+  align-items: flex-start;
+  line-height: 18px;
+  height: 18px;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.cell {
+  display: inline-block;
+  height: 18px;
+  overflow: hidden;
+}
+
+.char {
+  display: inline-block;
+  text-shadow: 0 18px 0 currentColor;
+  transition: transform 0.45s cubic-bezier(0.65, 0, 0.35, 1);
+}
+
+.space {
+  display: inline-block;
+  width: 3.16px;
+}
+
+:global([data-roll]:hover) .char,
+:global([data-roll]:focus-visible) .char {
+  transform: translateY(-18px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .char {
+    transition: none;
+  }
+}

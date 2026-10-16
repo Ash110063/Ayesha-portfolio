@@ -1,13 +1,7 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  images: {
-    formats: ["image/avif", "image/webp"],
-    qualities: [75, 90],
-  },
-  experimental: {
-    optimizePackageImports: ["gsap"],
-  },
+  reactStrictMode: true,
 };
 
 export default nextConfig;

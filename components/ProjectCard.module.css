@@ -1,0 +1,121 @@
+/* 1000 × 567 card. All inner sizes use cqw so the card scales as one piece. */
+.card {
+  position: relative;
+  display: block;
+  width: 100%;
+  max-width: 1000px;
+  aspect-ratio: 1000 / 567;
+  overflow: hidden;
+  container-type: inline-size;
+  isolation: isolate;
+  color: #fff;
+}
+
+/* Laptop photo */
+.laptop {
+  position: absolute;
+  left: 0;
+  top: 0.5cqw;
+  width: 100%;
+  height: 56.7cqw;
+  overflow: hidden;
+  pointer-events: none;
+}
+.laptop img {
+  position: absolute;
+  left: 0;
+  top: -8.15%;
+  width: 100%;
+  height: 108.16%;
+  max-width: none;
+}
+
+/* Laptop screen slot */
+.screen {
+  position: absolute;
+  overflow: hidden;
+  background: #050505;
+}
+.screenVideo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+}
+.screenPlaceholder {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6cqw;
+  font-family: var(--font-mono);
+  font-size: max(8px, 1cqw);
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.35);
+  background:
+    radial-gradient(120% 90% at 50% 0%, rgba(255, 255, 255, 0.05), transparent 60%),
+    repeating-linear-gradient(0deg, rgba(255, 255, 255, 0.025) 0 1px, transparent 1px 4px),
+    #070707;
+}
+.screenPlaceholder span:first-child {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* Floor under phone mockups */
+.floor {
+  position: absolute;
+  left: 0;
+  bottom: -0.014cqw;
+  width: 100.1cqw;
+  height: 13.527cqw;
+  background: var(--floor);
+}
+
+/* Phones */
+.phone {
+  position: absolute;
+  pointer-events: none;
+}
+.phone img {
+  width: 100%;
+  height: 100%;
+}
+
+/* Date / title tag */
+.tag {
+  position: absolute;
+  right: 5cqw;
+  bottom: 4cqw;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  padding: 0.6cqw 1cqw;
+  min-width: max-content;
+  background: var(--tag);
+  border: 1px dashed var(--line);
+  font-family: var(--font-mono);
+  font-weight: 500;
+  font-size: max(8px, 1.1cqw);
+  line-height: 1.727;
+  letter-spacing: -0.4px;
+  text-transform: uppercase;
+  white-space: nowrap;
+  z-index: 2;
+}
+.tagDate {
+  color: #fff;
+}
+.tagTitle {
+  color: var(--accent);
+}
+
+@media (max-width: 600px) {
+  .tag {
+    right: 3cqw;
+    bottom: 3cqw;
+  }
+}

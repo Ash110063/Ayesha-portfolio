@@ -1,36 +1,37 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Aisha Riaz — Portfolio
 
-## Getting Started
+Next.js 16 (App Router) + TypeScript + CSS Modules + Motion. Built from the Figma frame *AR-DS → 432:30*.
 
-First, run the development server:
+## Run it
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
+npm run assets   # pulls logo, icons and device mockups from Figma into /public/assets
+npm run dev      # http://localhost:3000
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+`npm run assets` uses temporary Figma links that expire around **23 Oct 2026**. After that, export the layers from Figma with the file names listed in `scripts/fetch-figma-assets.mjs` and drop them in `public/assets/`.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Where things live
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+| What | File |
+|---|---|
+| Project cards (titles, dates, glow colours, screen positions, videos) | `data/projects.ts` |
+| Headline, intro, nav, CTA link, slots count, sidebar wallpaper video | `data/site.ts` |
+| Service chips | `data/services.ts` |
+| Glow motion strength / speed / hover / entrance | `lib/glow-settings.ts` |
 
-## Learn More
+## Adding the laptop videos
 
-To learn more about Next.js, take a look at the following resources:
+1. Put the files in `public/videos/` (MP4, H.264; ~1600×960 fits the screen exactly).
+2. Set the path on the matching project in `data/projects.ts`, e.g. `video: "/videos/tech-company.mp4"`.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Videos autoplay muted on loop, are clipped to the laptop screen's rounded corners, keep the top of the frame visible, and pause while off screen.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+For the sky wallpaper at the bottom of the left panel, set `sidebarVideo` in `data/site.ts`.
 
-## Deploy on Vercel
+## Layout
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Left panel is `position: sticky` at full viewport height and never scrolls; the project column scrolls past it.
+- Cards are drawn on a 1000×567 grid using container units, so everything scales together.
+- Below 960px wide, the panel becomes a header and the cards stack underneath.
