@@ -1,4 +1,4 @@
-# Aisha Riaz — Portfolio
+# Ayesha Riaz — Portfolio
 
 Next.js 16 (App Router) + TypeScript + CSS Modules + Motion. Built from the Figma frame *AR-DS → 432:30*.
 

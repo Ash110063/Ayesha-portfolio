@@ -4,7 +4,7 @@ import { GeistMono } from "geist/font/mono";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Aisha Riaz — Product Design Lead",
+  title: "Ayesha Riaz — Product Design Lead",
   description:
     "Product Design Lead specializing in SaaS, AI platforms, chatbots & Web3, UX research and design systems.",
 };

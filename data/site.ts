@@ -1,5 +1,5 @@
 export const site = {
-  name: "AISHA RIAZ",
+  name: "AYESHA RIAZ",
   headline: "I lead design for AI products people actually trust.",
   intro:
     "From ambiguous AI behavior to clear, usable products. Product strategy, agentic UX, and SaaS experiences from 0→1.",
