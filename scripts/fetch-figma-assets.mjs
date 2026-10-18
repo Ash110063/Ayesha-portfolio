@@ -10,9 +10,7 @@
 import { access, mkdir, writeFile } from "node:fs/promises";
 import path from "node:path";
 
-// Two export batches from Figma; each link set expires ~7 days after export.
-const OLD = // exported 16 Oct 2026
-  "https://www.figma.com/api/mcp/asset/f3aeae34-8cfa-4732-9fc9-225cb9deb701";
+// Figma export links expire ~7 days after export.
 const NEW = // exported 18 Oct 2026
   "https://www.figma.com/api/mcp/asset/ff4039c0-2544-4981-a1d8-3e1e057fa18e";
 
@@ -20,7 +18,7 @@ const assets = [
   // Mockup photos
   [NEW, "22261.png", "laptop.png"],
   // Brand + rail
-  [OLD, "a8456.svg", "logo.svg"],
+  // logo.svg is committed in the repo (no download needed)
   [NEW, "29167.svg", "slots-icon.svg"],
   // Core expertise list icon
   [NEW, "dd08e.svg", "icons/uiux.svg"],

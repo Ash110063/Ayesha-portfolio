@@ -32,7 +32,7 @@ export function Sidebar() {
       {/* Left rail */}
       <div className={styles.rail}>
         <a href="/" className={styles.logo} aria-label="Aisha Riaz — home">
-          <img src="/assets/logo.svg" alt="" width={40.613} height={23.479} />
+          <img src="/assets/logo.svg" alt="" width={24} height={20} />
         </a>
         <span className={styles.vertical}>{site.name}</span>
 
