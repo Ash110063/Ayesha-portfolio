@@ -10,15 +10,14 @@ npm run assets   # pulls logo, icons and device mockups from Figma into /public/
 npm run dev      # http://localhost:3000
 ```
 
-`npm run assets` uses temporary Figma links that expire around **23 Oct 2026**. After that, export the layers from Figma with the file names listed in `scripts/fetch-figma-assets.mjs` and drop them in `public/assets/`.
+`npm run assets` uses temporary Figma links that expire around **23–25 Oct 2026**. After that, export the layers from Figma with the file names listed in `scripts/fetch-figma-assets.mjs` and drop them in `public/assets/`.
 
 ## Where things live
 
 | What | File |
 |---|---|
 | Project cards (titles, dates, glow colours, screen positions, videos) | `data/projects.ts` |
-| Headline, intro, nav, CTA link, slots count, sidebar wallpaper video | `data/site.ts` |
-| Service chips | `data/services.ts` |
+| Headline, intro, stats, nav, Résumé link, core expertise, rail badge, sidebar wallpaper video | `data/site.ts` |
 | Glow motion strength / speed / hover / entrance | `lib/glow-settings.ts` |
 
 ## Adding the laptop videos

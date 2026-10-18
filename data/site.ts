@@ -1,15 +1,24 @@
 export const site = {
   name: "AISHA RIAZ",
-  headline:
-    "Product Design Lead specializing in SaaS, AI Platforms, Chatbots & Web3, UX Research, Design Systems.",
+  headline: "I lead design for AI products people actually trust.",
   intro:
-    "Shipped 20+ Products, working directly with founders and engineering TEams to turn ambiguous LLM behavior into interfaces people actually trust & Enjoy",
-  slotsOpen: "02",
+    "From ambiguous AI behavior to clear, usable products. Product strategy, agentic UX, and SaaS experiences from 0→1.",
+  stats: "6 YEARS · 20+ PRODUCTS*",
+  /** Bottom of the left rail. */
+  availability: { primary: "GMT+5", secondary: "Open to remote" },
   nav: [
     { label: "Home", href: "/" },
-    { label: "Contact", href: "#contact" },
+    { label: "How I work", href: "#how-i-work" },
   ],
-  cta: { label: "Book a 30-min call", href: "#contact" },
+  /** Put the PDF at public/resume.pdf (or change the link). */
+  cta: { label: "Résumé", href: "/resume.pdf" },
+  /** "Core expertise" list. */
+  expertise: [
+    "Agentic AI & AI-native UX",
+    "Voice & Conversational AI",
+    "Complex SaaS & Systems",
+    "Product Strategy & Leadership",
+  ],
   /** Sky wallpaper behind the bottom of the left panel (portrait original rotated 90° clockwise, as in Figma). */
   sidebarVideo: "/videos/sidebar-sky.mp4",
 };

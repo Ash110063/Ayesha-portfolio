@@ -1,5 +1,4 @@
 import { site } from "@/data/site";
-import { services } from "@/data/services";
 import { RollText } from "./RollText";
 import styles from "./Sidebar.module.css";
 
@@ -39,9 +38,8 @@ export function Sidebar() {
 
         <div className={styles.slots}>
           <div className={styles.slotsText}>
-            <span className={styles.slotsNum}>{site.slotsOpen}</span>
-            <span className={styles.slotsLabel}>Slots</span>
-            <span className={styles.slotsLabel}>Open</span>
+            <span className={styles.slotsNum}>{site.availability.primary}</span>
+            <span className={styles.slotsLabel}>{site.availability.secondary}</span>
           </div>
           <img src="/assets/slots-icon.svg" alt="" width={25} height={27} />
         </div>
@@ -65,42 +63,38 @@ export function Sidebar() {
       <div className={styles.content}>
         <h1 className={styles.headline}>{site.headline}</h1>
 
-        <div className={styles.metaRow}>
+        <div className={`${styles.metaRow} ${styles.introRow}`}>
           <Bullet />
           <p className={styles.meta}>{site.intro}</p>
         </div>
 
-        <a href={site.cta.href} className={styles.cta} data-roll>
-          <span className={styles.person} aria-hidden>
-            <span className={styles.personCircle} />
-            <span className={styles.personDot} />
-            <span className={styles.personPlus} />
-          </span>
+        <p className={styles.stats}>{site.stats}</p>
+
+        <a
+          href={site.cta.href}
+          className={styles.cta}
+          target="_blank"
+          rel="noopener noreferrer"
+          data-roll
+        >
           <RollText text={site.cta.label} />
+          <span className={styles.ctaIcon} aria-hidden>
+            <img src="/assets/icons/arrow.svg" alt="" />
+          </span>
         </a>
 
-        <div className={`${styles.metaRow} ${styles.servicesLabel}`}>
+        <div className={`${styles.metaRow} ${styles.expertiseLabel}`}>
           <Bullet />
-          <h2 className={styles.meta}>Services I offer</h2>
+          <h2 className={styles.meta}>Core expertise</h2>
         </div>
 
-        <ul className={styles.chips}>
-          {services.map((row, r) => (
-            <li key={r} className={styles.chipRow}>
-              {row.map((s) => (
-                <span key={s.label} className={styles.chip} style={{ width: s.width }}>
-                  <span className={styles.chipIcon} style={{ left: s.iconLeft }} aria-hidden>
-                    {s.icon.map((part, i) => (
-                      <span key={i} style={{ inset: part.inset }}>
-                        <img src={part.src} alt="" />
-                      </span>
-                    ))}
-                  </span>
-                  <span className={styles.chipLabel} style={{ left: s.textLeft }}>
-                    {s.label}
-                  </span>
-                </span>
-              ))}
+        <ul className={styles.expertise}>
+          {site.expertise.map((item) => (
+            <li key={item} className={styles.expertiseItem}>
+              <span className={styles.expertiseIcon} aria-hidden>
+                <img src="/assets/icons/uiux.svg" alt="" />
+              </span>
+              <span className={styles.expertiseText}>{item}</span>
             </li>
           ))}
         </ul>
