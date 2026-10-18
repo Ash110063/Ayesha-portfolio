@@ -4,11 +4,17 @@
   display: block;
   width: 100%;
   max-width: 1000px;
-  aspect-ratio: 1000 / 567;
-  overflow: hidden;
   container-type: inline-size;
   isolation: isolate;
   color: #fff;
+}
+/* The 1000 × 567 artwork (laptop / phones, glow, tags) */
+.art {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1000 / 567;
+  overflow: hidden;
+  isolation: isolate;
 }
 
 /* Laptop photo */
@@ -88,7 +94,7 @@
 .tag {
   position: absolute;
   right: 5cqw;
-  bottom: 4cqw;
+  bottom: 7cqw;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
@@ -113,8 +119,134 @@
   color: var(--accent);
 }
 
-@media (max-width: 600px) {
+/* Explore / Coming soon — Figma: bottom 31, right 50, height 31 */
+.cta {
+  position: absolute;
+  right: 5cqw;
+  bottom: 3.1cqw;
+  height: max(26px, 3.1cqw);
+  display: inline-flex;
+  align-items: center;
+  gap: 1.2cqw;
+  padding: 0 1.6cqw 0 2.2cqw;
+  background: rgba(255, 255, 255, 0.22);
+  border: 1px dashed var(--line);
+  font-family: var(--font-mono);
+  font-weight: 500;
+  font-size: max(9px, 1.1cqw);
+  letter-spacing: -0.4px;
+  text-transform: uppercase;
+  white-space: nowrap;
+  color: #fff;
+  z-index: 2;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+.ctaArrow {
+  width: max(14px, 1.6cqw);
+  height: auto;
+  transition: transform 0.35s cubic-bezier(0.65, 0, 0.35, 1);
+}
+.live:hover .cta,
+.live:focus-visible .cta {
+  background: var(--accent);
+  color: #000;
+}
+.live:hover .ctaArrow {
+  transform: translateX(3px);
+}
+.soon {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+/* Category, name, summary, chips — Figma top-left block at x 38 */
+.info {
+  position: absolute;
+  left: 3.8cqw;
+  top: 2.8cqw;
+  right: 3.8cqw;
+  z-index: 2;
+  pointer-events: none;
+}
+.category {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 0.7cqw;
+  font-family: var(--font-mono);
+  font-weight: 500;
+  font-size: max(9px, 1cqw);
+  line-height: 1.4;
+  text-transform: uppercase;
+  color: #fff;
+}
+.bullet {
+  position: relative;
+  width: 9px;
+  height: 9px;
+  flex-shrink: 0;
+}
+.bullet i {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background: var(--ink-50);
+}
+.name {
+  margin: 0.9cqw 0 0;
+  font-size: max(20px, 2.4cqw);
+  font-weight: 400;
+  line-height: 1.4;
+  letter-spacing: -0.6px;
+}
+.summary {
+  margin: 0.3cqw 0 0;
+  max-width: 120ch;
+  font-family: var(--font-mono);
+  font-weight: 500;
+  font-size: max(9px, 1cqw);
+  line-height: 1.4;
+  text-transform: uppercase;
+  color: var(--ink-60);
+}
+.chips {
+  list-style: none;
+  margin: 1.1cqw 0 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6cqw;
+}
+.chips li {
+  display: inline-flex;
+  align-items: center;
+  height: max(24px, 3.1cqw);
+  padding: 0 1.2cqw;
+  background: var(--tag);
+  border: 1px dashed var(--line);
+  font-family: var(--font-mono);
+  font-weight: 500;
+  font-size: max(9px, 1.1cqw);
+  letter-spacing: -0.4px;
+  text-transform: uppercase;
+  white-space: nowrap;
+  color: var(--accent);
+}
+
+/* Narrow cards: the text block moves above the artwork so it never covers the device */
+@container (max-width: 640px) {
+  .info {
+    position: static;
+    padding: 18px 16px 14px;
+    background: var(--panel);
+    border-bottom: 1px dashed var(--line);
+  }
+}
+@media (max-width: 640px) {
   .tag {
+    right: 3cqw;
+    bottom: 13cqw;
+  }
+  .cta {
     right: 3cqw;
     bottom: 3cqw;
   }

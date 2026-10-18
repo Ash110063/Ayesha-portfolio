@@ -17,8 +17,17 @@ export type PhoneLayer = Rect & {
 
 export type Project = {
   slug: string;
+  /** Small mono tag at the bottom right (what the project is). */
   title: string;
   date: string;
+  /** Product name, top left. */
+  name: string;
+  /** One of the four "Core expertise" areas. */
+  category: string;
+  summary: string;
+  chips: string[];
+  /** Case study page. Leave empty to show "Coming soon". */
+  href?: string;
   background: string;
   /** Glow gradient — colours exactly as in Figma. */
   glow: string;
@@ -27,7 +36,6 @@ export type Project = {
   /** 1 = standard motion, lower = calmer. */
   energy?: number;
   tagWidth?: number;
-  href?: string;
 } & (
   | {
       device: "laptop";
@@ -42,6 +50,12 @@ export type Project = {
 export const projects: Project[] = [
   {
     slug: "tech-company-website",
+    name: "CPLUSOFT",
+    category: "Product Strategy & Leadership",
+    summary:
+      "Redefining how an AI and software company presents itself, across positioning, structure and a scalable web system.",
+    chips: ["Product Strategy", "Design Leadership", "Web Experience"],
+    href: "/work/cplusoft",
     title: "Tech Company Website",
     date: "June 2026",
     background: "#141414",
@@ -54,6 +68,12 @@ export const projects: Project[] = [
   },
   {
     slug: "voice-agents-platform",
+    name: "NUREXA",
+    category: "Voice & Conversational AI",
+    summary:
+      "Designing a white-label AI receptionist for B2B teams, from the website that sells it to the admin panel that runs it.",
+    chips: ["Conversational UX", "Voice AI", "SaaS Admin"],
+    href: "/work/nurexa",
     title: "Voice Agents Platform",
     date: "Jan 2026",
     background: "#141414",
@@ -66,6 +86,11 @@ export const projects: Project[] = [
   },
   {
     slug: "logistic-management",
+    name: "LOGIS AI",
+    category: "Agentic AI & AI-native UX",
+    summary:
+      "Designing an AI-assisted logistics platform that turns trucking costs, routes and loads into instant, confident decisions.",
+    chips: ["Agentic AI", "Logistics SaaS", "Data UX"],
     title: "Logistic Management",
     date: "May 2026",
     background: "#151515",
@@ -78,6 +103,11 @@ export const projects: Project[] = [
   },
   {
     slug: "event-bus-management",
+    name: "TRAVEL MASTER",
+    category: "Complex SaaS & Systems",
+    summary:
+      "Designing an AI-assisted fleet management system that keeps vehicles, drivers, bookings and finances running from one platform.",
+    chips: ["Fleet Management", "AI-assisted Ops", "Complex SaaS"],
     title: "Event Bus Management",
     date: "Aug 2026",
     background: "#141414",
@@ -90,6 +120,11 @@ export const projects: Project[] = [
   },
   {
     slug: "art-marketplace-app",
+    name: "IMAGO",
+    category: "Product Strategy & Leadership",
+    summary:
+      "Shaping a curated mobile marketplace where collectors discover, trust and buy original art.",
+    chips: ["Mobile App", "Marketplace UX", "Brand"],
     title: "Exquisite Art Marketplace App",
     date: "Nov 2025",
     background: "#141414",
@@ -109,6 +144,11 @@ export const projects: Project[] = [
   },
   {
     slug: "trip-planner-app",
+    name: "TRIPORA",
+    category: "Product Strategy & Leadership",
+    summary:
+      "Designing a travel app that turns trip planning into a story, from route to journal.",
+    chips: ["Mobile App", "Travel UX", "Product Strategy"],
     title: "Trip Planner App",
     date: "Oct 2025",
     background: "#141414",

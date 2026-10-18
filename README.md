@@ -16,7 +16,9 @@ npm run dev      # http://localhost:3000
 
 | What | File |
 |---|---|
-| Project cards (titles, dates, glow colours, screen positions, videos) | `data/projects.ts` |
+| Project cards (name, category, one-liner, chips, case study link, dates, glow colours, screen positions, videos) | `data/projects.ts` |
+| Case study pages | `app/work/cplusoft/page.tsx`, `app/work/nurexa/page.tsx` |
+| Shared case study layout (rail, brief panel, sections) | `components/case/` |
 | Headline, intro, stats, nav, Résumé link, core expertise, rail badge, sidebar wallpaper video | `data/site.ts` |
 | Glow motion strength / speed / hover / entrance | `lib/glow-settings.ts` |
 
@@ -34,3 +36,8 @@ For the sky wallpaper at the bottom of the left panel, set `sidebarVideo` in `da
 - Left panel is `position: sticky` at full viewport height and never scrolls; the project column scrolls past it.
 - Cards are drawn on a 1000×567 grid using container units, so everything scales together.
 - Below 960px wide, the panel becomes a header and the cards stack underneath.
+
+## Case studies
+
+A card with an `href` in `data/projects.ts` shows **Explore** and links to its page; a card without one shows **Coming soon**.
+To add a new case study, copy `app/work/nurexa/` to `app/work/<slug>/`, put its images in `public/work/<slug>/`, and set `href: "/work/<slug>"` on the card.
