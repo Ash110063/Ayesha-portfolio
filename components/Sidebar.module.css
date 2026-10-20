@@ -241,9 +241,9 @@
 }
 .ctaIcon img {
   position: absolute;
-  inset: 25.78% 0;
+  inset: 0;
   width: 100%;
-  height: 48.44%;
+  height: 100%;
   transition: transform 0.45s cubic-bezier(0.65, 0, 0.35, 1);
 }
 .cta:hover .ctaIcon img {
@@ -284,9 +284,9 @@
 }
 .expertiseIcon img {
   position: absolute;
-  inset: 13.57% 9.07% 13.56% 9.07%;
-  width: 81.86%;
-  height: 72.87%;
+  inset: 0;
+  width: 100%;
+  height: 100%;
 }
 .expertiseText {
   font-family: var(--font-mono);

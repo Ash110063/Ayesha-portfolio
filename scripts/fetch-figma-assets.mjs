@@ -15,15 +15,9 @@ const NEW = // exported 18 Oct 2026
   "https://www.figma.com/api/mcp/asset/ff4039c0-2544-4981-a1d8-3e1e057fa18e";
 
 const assets = [
-  // Mockup photos
-  [NEW, "22261.png", "laptop.png"],
-  // Brand + rail
-  // logo.svg is committed in the repo (no download needed)
-  [NEW, "29167.svg", "slots-icon.svg"],
-  // Core expertise list icon
-  [NEW, "dd08e.svg", "icons/uiux.svg"],
-  // Résumé button arrow
-  [NEW, "546e1.svg", "icons/arrow.svg"],
+  // All current assets are committed in public/assets (laptop.png, logo.svg,
+  // slots-icon.svg, icons/uiux.svg, icons/arrow.svg), so nothing is fetched.
+  // Add [NEW, "<figma asset file>", "<local name>"] rows here for new layers.
 ];
 
 const outDir = path.join(process.cwd(), "public", "assets");

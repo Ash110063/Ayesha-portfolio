@@ -6,11 +6,11 @@ Next.js 16 (App Router) + TypeScript + CSS Modules + Motion. Built from the Figm
 
 ```bash
 npm install
-npm run assets   # pulls logo, icons and device mockups from Figma into /public/assets
+npm run assets   # optional: only for new Figma layers (see scripts/fetch-figma-assets.mjs)
 npm run dev      # http://localhost:3000
 ```
 
-`npm run assets` uses temporary Figma links that expire around **23–25 Oct 2026**. After that, export the layers from Figma with the file names listed in `scripts/fetch-figma-assets.mjs` and drop them in `public/assets/`.
+All images live in `public/assets/` and are committed, so builds never depend on Figma links. To add a new asset, export it from Figma and drop it in that folder.
 
 ## Where things live
 

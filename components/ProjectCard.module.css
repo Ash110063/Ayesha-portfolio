@@ -27,13 +27,13 @@
   overflow: hidden;
   pointer-events: none;
 }
+/* 2000 × 1124 export of the Figma laptop layer, transparent above the desk */
 .laptop img {
   position: absolute;
   left: 0;
-  top: -8.15%;
+  top: 0;
   width: 100%;
-  height: 108.16%;
-  max-width: none;
+  height: auto;
 }
 
 /* Laptop screen slot */
